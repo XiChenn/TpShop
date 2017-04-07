@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="application/x-javascript"> addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    } </script>
+    <link href="{$Think.ADMIN_CSS}style_login.css" rel='stylesheet' type='text/css'/>
+</head>
+<body>
+<style>
+    #boxs{
+        width: 400px;
+        text-align: left!important;
+        margin-left: 42px;
+    }
+    .capcha{
+        margin-top:0!important;
+        width: 200px!important;
+    }
+    input[type="password"]{
+        margin-bottom:10px;
+    }
+</style>
+<script>$(document).ready(function (c) {
+    $('.close').on('click', function (c) {
+        $('.login-form').fadeOut('slow', function (c) {
+            $('.login-form').remove();
+        });
+    });
+});
+</script>
+<!--SIGN UP-->
+<h1>后台登录</h1>
+<div class="login-form">
+    <div class="head-info">
+        <label class="lbl-1"> </label>
+        <label class="lbl-2"> </label>
+        <label class="lbl-3"> </label>
+    </div>
+    <div class="clear"></div>
+    <div class="avtar"><img src="{$Think.ADMIN_IMG}avtar.png"/></div>
+    <form>
+        <input name="mg_name" type="text" class="text" value="用户名" onfocus="this.value = '';"
+               onblur="if (this.value == '') {this.value = '用户名';}">
+        <div class="key">
+            <input name="mg_pwd" type="password" value="Password" onfocus="this.value = '';"
+                   onblur="if (this.value == '') {this.value = 'Password';}">
+        </div>
+        <div id="boxs">
+            <input name="capcha" type="text" class="capcha" value="验证码" onfocus="this.value = '';"
+                   onblur="if (this.value == '') {this.value = '验证码';}">
+            <img src="" alt="">
+        </div>
+    </form>
+    <div class="signin">
+        <input type="submit" value="登录">
+    </div>
+</div>
+<div class="copy-rights">
+    <!--<p>Copyright &copy; 2015.Company name All rights reserved.More Templates</p>-->
+</div>
+</body>
+</html>
